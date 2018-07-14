@@ -1,0 +1,190 @@
+\input{img/cube.tex}
+
+\begin{tikzpicture}[scale=0.6]
+\newcommand{\Boxcolor}{\Thesiscolorbright}
+\newcommand{\Linecolor}{black}
+\newcommand{\halve}{0.3}
+
+% define values
+\pgfmathsetmacro\scale{1/100}
+\pgfmathsetmacro\LayerDist{120}
+\pgfmathsetmacro\THW{192 * \scale}
+\pgfmathsetmacro\THWFactor{0.7}
+\pgfmathsetmacro\TFirstLayer{3 * \scale}
+\pgfmathsetmacro\TLayer{\TFirstLayer*(5+1/3)}
+\pgfmathsetmacro\TLayerFactor{1.5}
+\pgfmathsetmacro\XShift{100 * \scale}
+\pgfmathsetmacro\YShift{0 * \scale}
+\pgfmathsetmacro\ZShift{0 * \scale}
+
+% first network part
+\cube{\THW}{\TFirstLayer}{\THW}{\XShift}{\YShift}{\ZShift}{192}{192}{3}
+
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV1}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift-0.005cm}{\ZShift}{96}{96}{16}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV2}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift-0.005cm}{\ZShift}{48}{48}{32}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV3}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift-0.003cm}{\ZShift}{24}{24}{64}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV4}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{12}{12}{128}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV5}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{6}{6}{256}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV6}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{3}{3}{512}
+
+% concatenation
+\pgfmathsetmacro\XShift{250 * \scale}
+\pgfmathsetmacro\YShift{-300 * \scale}
+\pgfmathsetmacro\ZShift{0}
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{3}{3}{512}
+\pgfmathsetmacro\XShift{\XShift + \TLayer + 50 * \scale}
+\node at (\XShift,{\YShift+\THW/4},\ZShift) {\huge{$\oplus$}};
+\node [label=above:\tiny{CONCAT}] at (\XShift,{\YShift+\THW/4+0.5},\ZShift) {};
+\pgfmathsetmacro\XShift{\XShift + 50 * \scale}
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{3}{3}{512}
+\node [label={above:$z$}] at ({\XShift+\TLayer/2},\YShift+\THW/2) {};
+
+% resizing
+\node at ({\XShift + \TLayer + (200 * \scale)/2},{\YShift+\THW/4},\ZShift) {\huge{$\rightarrow$}};
+\node [label=above:\tiny{RESIZE}] at ({\XShift + \TLayer + (200 * \scale)/2},{\YShift+\THW/4+0.5},\ZShift) {};
+\pgfmathsetmacro\XShift{\XShift + \TLayer + 200 * \scale}
+\pgfmathsetmacro\TLayer{\TLayer*2}
+\pgfmathsetmacro\THW{(\THW * 4 * \THWFactor) / 3}
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{4}{4}{1024}
+
+
+% second network part
+\pgfmathsetmacro\XShift{0 * \scale}
+\pgfmathsetmacro\YShift{\YShift - 300 * \scale}
+\pgfmathsetmacro\ZShift{0}
+
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{4}{4}{1024}
+
+\pgfmathsetmacro\THW{\THW/\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.9 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift-\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift-\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer/\TLayerFactor}
+
+% add text
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV1}};
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{8}{8}{512}
+
+\pgfmathsetmacro\THW{\THW/\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.9 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift-\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift-\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer/\TLayerFactor}
+
+% add text
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV2}};
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{16}{16}{256}
+
+\pgfmathsetmacro\THW{\THW/\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.9 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift-\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift-\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer/\TLayerFactor}
+
+% add text
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV3}};
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{32}{32}{128}
+
+\pgfmathsetmacro\THW{\THW/\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.9 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift-\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift-\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer/\TLayerFactor}
+
+% add text
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV4}};
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{64}{64}{64}
+
+\pgfmathsetmacro\THW{\THW/\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.9 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift-\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift-\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer/\TLayerFactor}
+
+% add text
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV5}};
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{64}{64}{32}
+
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale + 0.5}
+\pgfmathsetmacro\TLayer{3 * \scale}
+\cube{\THW}{\TLayer}{\THW}{\XShift+0.005cm}{\YShift}{\ZShift}{64}{64}{3}
+
+\pgfmathsetmacro\XShiftInc{\LayerDist * \scale / 2}
+\node[anchor=base] at ({\XShift-\XShiftInc},-5,-0.5) {\tiny{TCONV6}};
+
+% arrows
+\draw[rounded corners=7pt, ->, thick](13,0.6) -- (14,0.6) -- (14,-1.5) -- (1,-1.5) -- (1,-2.95) -- (2,-2.95);
+\draw[rounded corners=7pt, ->, thick](13.3,-2.95) -- (14.3,-2.95) -- (14.3,-4) -- (-1.5,-4) -- (-1.5,-6) -- (-0.5,-6);
+\end{tikzpicture}

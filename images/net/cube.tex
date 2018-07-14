@@ -1,0 +1,148 @@
+\newcommand{\cube}[9]{
+	% save values to variables
+	\def \CubeHeight {#1}
+	\def \CubeWidth {#2}
+	\def \CubeDepth {#3}
+	\def \CubeX {#4}
+	\def \CubeY {#5}
+	\def \CubeZ {#6}
+	\def \CubeH {#7}
+	\def \CubeW {#8}
+	\def \CubeL {#9}
+	\def \linecolor {black}
+	\def \facecolor {\Thesiscolorbright}
+	\def \CubeOpacity {0.6}
+	
+	% define points
+	\coordinate (A) at (\CubeX,	       \CubeY,		   \CubeZ+\CubeDepth);
+	\coordinate (B) at (\CubeX+\CubeWidth, \CubeY,         \CubeZ+\CubeDepth);
+	\coordinate (C) at (\CubeX,        \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+	\coordinate (D) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+	\coordinate (E) at (\CubeX,		   \CubeY,		   \CubeZ);
+	\coordinate (F) at (\CubeX+\CubeWidth, \CubeY,		   \CubeZ);
+	\coordinate (G) at (\CubeX,		   \CubeY+\CubeHeight, \CubeZ);
+	\coordinate (H) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ);
+	
+	% create surfaces
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+			(A) -- (B) -- (F) -- (E) -- cycle;% Bottom Face
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+			(E) -- (F) -- (H) -- (G) -- cycle;% Back Face
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+			(A) -- (C) -- (G) -- (E) -- cycle;% Left Face
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+			(B) -- (D) -- (H) -- (F) -- cycle;% Right Face
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+			(C) -- (D) -- (H) -- (G) -- cycle;% Top Face
+	\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+	(A) -- (B) -- (D) -- (C) -- cycle;% Front Face
+			
+	\node [label={below:\tiny{$\CubeH\times \CubeW\times \CubeL$}}] at ( $ (A)!0.5!(B) $ ) (T) {};
+	
+%	% Following is for debugging purposes to see where the points are
+%	% These are last so that they show up on top
+%	\foreach \xy in {A, B, C, D, E, F, G, H}{
+%	    \node at (\xy) {\tiny{\xy}};
+%	}
+}
+
+\newcommand{\cubedotted}[9]{
+% save values to variables
+\def \CubeHeight {#1}
+\def \CubeWidth {#2}
+\def \CubeDepth {#3}
+\def \CubeX {#4}
+\def \CubeY {#5}
+\def \CubeZ {#6}
+\def \CubeH {#7}
+\def \CubeW {#8}
+\def \CubeL {#9}
+\def \linecolor {black}
+\def \facecolor {\Thesiscolorbright}
+\def \CubeOpacity {0.8}
+
+% define points
+\coordinate (A) at (\CubeX,	       \CubeY,		   \CubeZ+\CubeDepth);
+\coordinate (B) at (\CubeX+\CubeWidth, \CubeY,         \CubeZ+\CubeDepth);
+\coordinate (C) at (\CubeX,        \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+\coordinate (D) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+\coordinate (E) at (\CubeX,		   \CubeY,		   \CubeZ);
+\coordinate (F) at (\CubeX+\CubeWidth, \CubeY,		   \CubeZ);
+\coordinate (G) at (\CubeX,		   \CubeY+\CubeHeight, \CubeZ);
+\coordinate (H) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ);
+
+% create surfaces
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(A) -- (B) -- (F) -- (E) -- cycle;% Bottom Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(E) -- (F) -- (H) -- (G) -- cycle;% Back Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(A) -- (C) -- (G) -- (E) -- cycle;% Left Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(B) -- (D) -- (H) -- (F) -- cycle;% Right Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(C) -- (D) -- (H) -- (G) -- cycle;% Top Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(A) -- (B) -- (D) -- (C) -- cycle;% Front Face
+
+\node [label={below:\tiny{$\CubeH\times \CubeW\times \CubeL$}}] at ( $ (A)!0.5!(B) $ ) (T) {};
+\node [label={left:$z$}] at ( $ (A)!0.5!(G) $ ) {};
+
+\coordinate (BP) at (\CubeX+\CubeWidth+1+0.01cm, \CubeY,         \CubeZ+\CubeDepth);
+\coordinate (DP) at (\CubeX+\CubeWidth+1+0.01cm, \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+\coordinate (FP) at (\CubeX+\CubeWidth+1+0.01cm, \CubeY,		   \CubeZ);
+\coordinate (HP) at (\CubeX+\CubeWidth+1+0.01cm, \CubeY+\CubeHeight, \CubeZ);
+\draw [densely dashed,thick,->] (A) -- (BP);
+\draw [densely dashed,thick,->] (C) -- (DP);
+\draw [densely dashed,thick,->] (G) -- (HP);
+\draw [densely dashed,thick,->] (E) -- (FP);
+
+%	% Following is for debugging purposes to see where the points are
+%	% These are last so that they show up on top
+%	\foreach \xy in {A, B, C, D, E, F, G, H}{
+%	    \node at (\xy) {\tiny{\xy}};
+%	}
+}
+
+\newcommand{\cubenotext}[6]{
+% save values to variables
+\def \CubeHeight {#1}
+\def \CubeWidth {#2}
+\def \CubeDepth {#3}
+\def \CubeX {#4}
+\def \CubeY {#5}
+\def \CubeZ {#6}
+\def \linecolor {black}
+\def \facecolor {\Thesiscolorbright}
+\def \CubeOpacity {0.8}
+
+% define points
+\coordinate (A) at (\CubeX,	       \CubeY,		   \CubeZ+\CubeDepth);
+\coordinate (B) at (\CubeX+\CubeWidth, \CubeY,         \CubeZ+\CubeDepth);
+\coordinate (C) at (\CubeX,        \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+\coordinate (D) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ+\CubeDepth);
+\coordinate (E) at (\CubeX,		   \CubeY,		   \CubeZ);
+\coordinate (F) at (\CubeX+\CubeWidth, \CubeY,		   \CubeZ);
+\coordinate (G) at (\CubeX,		   \CubeY+\CubeHeight, \CubeZ);
+\coordinate (H) at (\CubeX+\CubeWidth, \CubeY+\CubeHeight, \CubeZ);
+
+% create surfaces
+\draw[\linecolor,fill=\facecolor] 
+(A) -- (B) -- (F) -- (E) -- cycle;% Bottom Face
+\draw[\linecolor,fill=\facecolor] 
+(E) -- (F) -- (H) -- (G) -- cycle;% Back Face
+\draw[\linecolor,fill=\facecolor] 
+(A) -- (C) -- (G) -- (E) -- cycle;% Left Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(B) -- (D) -- (H) -- (F) -- cycle;% Right Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(C) -- (D) -- (H) -- (G) -- cycle;% Top Face
+\draw[\linecolor,fill=\facecolor,opacity=\CubeOpacity] 
+(A) -- (B) -- (D) -- (C) -- cycle;% Front Face
+
+%	% Following is for debugging purposes to see where the points are
+%	% These are last so that they show up on top
+%	\foreach \xy in {A, B, C, D, E, F, G, H}{
+%	    \node at (\xy) {\tiny{\xy}};
+%	}
+}

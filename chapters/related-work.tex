@@ -1,0 +1,28 @@
+\chapter{Related Work}
+	In computer vision shape-from-shading is an long standing and well studied problem. And has therefore an extensive literature~\cite{Shape_from_shading_A_survey, Perceiving_Shape_from_Shading}. Besides the classical numerical approaches~\cite{Numerical_methods_for_shape_from_shading}, machine learning solutions~\cite{Training_many_parameter_shape_from_shading_models, A_neural_network_approach_for_shape_from_shading} become more and more relevant. However recent advances in Convolutional Neuronal Networks~\cite{ImageNet_Deep_Convolutional_Neural_Networks} have hardly been implemented yet to the shape from shading problem due to te lack of suitable training data.
+	
+\section{Classic Shape-From-Shading}
+\label{sec:relwork:SFS}
+
+	% Geschichte von Shape from shading
+	Shape-from-shading is a long standing problem in computer vision. It uses the shading of an object's surface to obtain information about it's three-dimensional shape. The first shape-from-shading technology was developed by Horn et al.~\cite{Horn_SHAPE_FROM_SHADING_1970}+ in the early 1970s. He showed, that for many surfaces the fraction of the incident light which is reflected in a certain direction is a smooth function. If the surface reflection function and the position of the light source is know, the shape can be obtained from the shading. Due to the fact that the equations are quite complex Horn suggested to simplifies the conditions of the method. One proposed simplification is to assume a single withe point light source and Lambertian reflectance. Under this assumptions Lambertian shape-from-shading was explored for decades. However the constraints given by the illumination are not sufficient to specify the local orientation. To restrict shape estimation chromatic illumination~\cite{Shape_from_shading_under_complex_natural_illumination, Shape_estimation_in_natural_illumination} is used. It not only restrict the shape estimation significantly but also it approximates real-world environments a lot better. However, since both methods strongly depend on favorable known illumination, they are not suitable for practical applications. Apart from that it is important to be aware that  some impossible shaded images exist, witch could not been arisen from shading on a smooth surface with uniform reflecting properties and lightning~\cite{Impossible_shaded_images}. For those images shape-from-shading will not give the correct solution.
+	\\ \\
+	Instead of assuming a point light source, estimating the shape based on the material properties of an object is a promising approach. So if the orientation clues in the lighting environment are exploited, one can determine the objects shape along with the objects bidirectional reflectance distribution function (BRDF)~\cite{BRDF_Shape_and_reflectance_from_natural_illumination}. Nonetheless a high quality environment map is necessary as this method exploits the contextual information embedded in the lightning. Also shape-from-shading using the objects BRDF requires a known illumination. It has been shown, that natural images have simple statistics~\cite{Statistics_of_Natural_Image_Wood, Relations_between_the_statistics_of_natural_images}. Given this fact natural image statistics can be used to eliminate the constrain of a known illumination and albedo and to estimate the shape of an object as part of a decomposition of a single image into its intrinsic components~\cite{Shape_albedo_and_illumination_from_a_single_image}. Therefore a generative model have to be optimized. Making the extension of the model with new cues very complex. 
+
+
+\section{Machine Learning}
+\label{sec:relwork:ML}	
+	
+- versiedene ML ansätze zu SFS und deren einschränkungen
+
+
+	%Überleitung zu CNN virher marrnet und den anderen CNN ansatz erklären
+	Despite this methods recent advances of Convolutional neural networks have hardly been implemented and studied yet. 
+	
+\subsection{Convolutional Neural Networks}
+	In 2012 Hinton et al.~\cite{ImageNet_Deep_Convolutional_Neural_Networks}
+\label{sec:relwork:CNN}
+- was sind CNN? \\
+- neuste fortschritte  \\
+- hier schon ResNet erklären? 
+	

@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1512048637 "cube.tex" "cube.pdf" "cube" 1512048637
+  "/etc/texmf/web2c/texmf.cnf" 1490820887 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1503471673 1349077 593227bf02cfb6e51bf1211c3c58860d ""
+  "cube.aux" 1512041398 8 a94a2480d3289e625eea47cd1b285758 ""
+  "cube.tex" 1512048636 1404 130d262086435f3faf79c5b8c9ef1bbf ""
+  (generated)
+  "cube.pdf"
+  "cube.log"

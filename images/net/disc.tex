@@ -1,0 +1,108 @@
+\input{img/cube.tex}
+
+\begin{tikzpicture}[scale=1]
+\newcommand{\Boxcolor}{\Thesiscolorbright}
+\newcommand{\Linecolor}{black}
+\newcommand{\halve}{0.3}
+
+% define values
+\pgfmathsetmacro\scale{1/100}
+\pgfmathsetmacro\LayerDist{80}
+\pgfmathsetmacro\THW{192 * \scale}
+\pgfmathsetmacro\THWFactor{0.7}
+\pgfmathsetmacro\TFirstLayer{3 * \scale}
+\pgfmathsetmacro\TLayer{64 * \scale}
+\pgfmathsetmacro\TLayerFactor{1.2}
+\pgfmathsetmacro\XShift{350 * \scale}
+\pgfmathsetmacro\YShift{0 * \scale}
+\pgfmathsetmacro\ZShift{0 * \scale}
+
+% first network part
+\cube{\THW}{\TFirstLayer}{\THW}{\XShift}{\YShift}{\ZShift}{192}{192}{3}
+
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV1}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale* 0.5}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{96}{96}{64}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV2}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{48}{48}{128}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV3}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{24}{24}{256}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV4}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{12}{12}{512}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV5}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{\TLayer*\TLayerFactor}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{6}{6}{1024}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2},2.2,0) {\tiny{CONV6}};
+
+\pgfmathsetmacro\THW{\THW*\THWFactor}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{1*\scale}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{3}{3}{1}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+
+% add text
+\node at ({\XShift+\XShiftInc/2-0.3},2.2,0) {\tiny{AVG}};
+
+\pgfmathsetmacro\THW{10*\scale}
+\pgfmathsetmacro\XShift{\XShift + \TLayer * 0.8 + \LayerDist * \scale +0.1}
+\pgfmathsetmacro\YShift{\YShift+\THW/4}
+\pgfmathsetmacro\ZShift{\ZShift+\THW/4}
+\pgfmathsetmacro\TLayer{1*\scale}
+
+\cube{\THW}{\TLayer}{\THW}{\XShift}{\YShift}{\ZShift}{1}{1}{1}
+\pgfmathsetmacro\XShiftInc{\TLayer + \LayerDist * \scale}
+\end{tikzpicture}

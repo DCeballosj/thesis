@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1512040978 "gan.tex" "gan.pdf" "gan" 1512040978
+  "/etc/texmf/web2c/texmf.cnf" 1490820887 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1503471673 1349077 593227bf02cfb6e51bf1211c3c58860d ""
+  "gan.aux" 1502825714 8 a94a2480d3289e625eea47cd1b285758 ""
+  "gan.tex" 1503319531 1334 7f273566acc5b055a5ed3a76c3dff9b2 ""
+  (generated)
+  "gan.pdf"
+  "gan.log"

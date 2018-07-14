@@ -1,0 +1,21 @@
+\begin{tikzpicture}[scale=5/192]
+	\draw (0,0) rectangle (192,192) {};
+	\draw (64,64) rectangle (128,128);
+	\node at ( $ (64,64) !0.5! (128,128) $ ) {Face};
+	\node at ( $ (64,64) !0.5! (128,0) $ ) {Background};
+	
+	\draw[{<[scale=2.5,
+		length=2,
+		width=3]}-{>[scale=2.5,
+		length=2,
+		width=3]}] (64,138) -- (128,138);
+	\node[anchor=south] at ( $ (64,138)!0.5!(128,138) $ ) {$b$};
+	
+	\draw[{<[scale=2.5,
+		length=2,
+		width=3]}-{>[scale=2.5,
+		length=2,
+		width=3]}] (0,202) -- (192,202);
+	\node[anchor=south] at ( $ (0,202)!0.5!(192,202) $ ) {$f\cdot b$};
+	
+\end{tikzpicture}

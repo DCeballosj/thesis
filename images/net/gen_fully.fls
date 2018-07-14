@@ -1,0 +1,7 @@
+PWD /home/jannewulf/Dropbox/Uni/Thesis/Latex/img
+INPUT /etc/texmf/web2c/texmf.cnf
+INPUT /usr/share/texmf/web2c/texmf.cnf
+INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
+INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
+INPUT gen_fully.tex
+OUTPUT gen_fully.log

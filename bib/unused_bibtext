@@ -1,0 +1,155 @@
+####
+https://pdfs.semanticscholar.org/ed5e/e6450e718d71e15e68d7f9790fa84db61b13.pdf
+#####
+
+@InProceedings{MarrNet,
+  title={{MarrNet: 3D Shape Reconstruction via 2.5D Sketches}},
+  author={Wu, Jiajun and Wang, Yifan and Xue, Tianfan and Sun, Xingyuan and Freeman, William T and Tenenbaum, Joshua B},
+  booktitle={AINIPS},
+  year={2017}
+}
+
+@InProceedings{ResNet,
+author = {He, Kaiming and Zhang, Xiangyu and Ren, Shaoqing and Sun, Jian},
+title = {Deep Residual Learning for Image Recognition},
+booktitle = The IEEE Conference on Computer Vision and Pattern Recognition},
+month = {June},
+year = {2016}
+
+@misc{Mitsuba,
+   Author = {Wenzel Jakob},
+   Year = {2010},
+   Note = {http://www.mitsuba-renderer.org},
+   Title = {Mitsuba renderer}
+}
+
+@INPROCEEDINGS{SUN2012,
+author={J. Xiao and J. Hays and K. A. Ehinger and A. Oliva and A. Torralba},
+booktitle={CCVPR},
+title={SUN database: Large-scale scene recognition from abbey to zoo},
+year={2010},
+volume={},
+number={},
+pages={3485-3492},
+keywords={computer vision;human factors;image classification;object recognition;visual databases;SUN database;abbey;computer vision;finer-grained scene representation;human scene classification performance;large-scale scene recognition;object categorization;scene categorization;scene category;scene understanding database;scene understanding research;state-of-the-art algorithms;zoo;Anthropometry;Bridges;Computer vision;Humans;Image databases;Large-scale systems;Layout;Legged locomotion;Spatial databases;Sun},
+doi={10.1109/CVPR.2010.5539970},
+ISSN={1063-6919},
+month={June},}
+
+@techreport{shapenet2015,
+  title       = {{ShapeNet: An Information-Rich 3D Model Repository}},
+  author      = {Chang, Angel X. and Funkhouser, Thomas and Guibas, Leonidas and Hanrahan, Pat and Huang, Qixing and Li, Zimo and Savarese, Silvio and Savva, Manolis and Song, Shuran and Su, Hao and Xiao, Jianxiong and Yi, Li and Yu, Fisher},
+  number      = {arXiv:1512.03012 [cs.GR]},
+  institution = {Stanford University --- Princeton University --- Toyota Technological Institute at Chicago},
+  year        = {2015}
+}
+
+@INPROCEEDINGS{Discriminative_shape_from_shading,
+author={S. R. Richter and S. Roth},
+booktitle={CVPR},
+title={Discriminative shape from shading in uncalibrated illumination},
+year={2015},
+volume={},
+number={},
+pages={1128-1136},
+keywords={estimation theory;image processing;learning (artificial intelligence);regression analysis;Von Mises-Fisher distributions;discriminative learning approach;discriminative shape;pixel-independent prediction;reflectance map estimation;regression forests;shading cues;silhouette features;spatial features;surface normal estimation;texton features;uncalibrated illumination;Correlation;Estimation;Image color analysis;Lighting;Shape;Training;Vegetation},
+doi={10.1109/CVPR.2015.7298716},
+ISSN={1063-6919},
+month={June},}
+
+@INPROCEEDINGS{Learning_Non_Lambertian_Object_Intrinsics ,
+author={J. Shi and Y. Dong and H. Su and S. X. Yu},
+booktitle={CVPR},
+title={Learning Non-Lambertian Object Intrinsics Across ShapeNet Categories},
+year={2017},
+volume={},
+number={},
+pages={5844-5853},
+keywords={computer vision;image classification;image representation;inverse problems;learning (artificial intelligence);rendering (computer graphics);solid modelling;CNN classification;HDR environment maps;ShapeNet categories;ShapeNet database;additive specular component;encoder-decoder CNN;ground-truth images;inverse problem;large-scale object intrinsics database;learning nonLambertian object-level intrinsic problem;Decoding;Lighting;Machine learning;Mathematical model;Rendering (computer graphics);Spatial resolution;Training},
+doi={10.1109/CVPR.2017.619},
+ISSN={1063-6919},
+month={July},}
+
+@INPROCEEDINGS{Ground_truth_dataset_for_intrinsic_image_algorithms,
+author={R. Grosse and M. K. Johnson and E. H. Adelson and W. T. Freeman},
+booktitle={ICCV},
+title={Ground truth dataset and baseline evaluations for intrinsic image algorithms},
+year={2009},
+volume={},
+number={},
+pages={2335-2342},
+keywords={image processing;Lambertian shading;ground truth dataset;ground-truth dataset;intrinsic image algorithms;intrinsic image decompositions;Computer vision;Geometry;Image decomposition;Image retrieval;Information retrieval;Layout;Light sources;Lighting;Reflectivity;Shape},
+doi={10.1109/ICCV.2009.5459428},
+ISSN={1550-5499},
+month={Sept},}
+
+@INPROCEEDINGS{Training_many_parameter_shape_from_shading_models,
+author={N. Khan and Lam Tran and M. Tappen},
+booktitle={ICCV},
+title={Training many-parameter shape-from-shading models using a surface database},
+year={2009},
+volume={},
+number={},
+pages={1433-1440},
+keywords={Gaussian processes;image reconstruction;image resolution;learning (artificial intelligence);reflectivity;shape recognition;visual databases;3D shapes;Gaussian parameterization;SFS problem;illumination direction;intensity-based weights;isophotes;machine learning;many-parameter shape-from-shading models;offline phase;pixel;reflectance map;shape reconstruction;surface database;weighting parameter set;Computer vision;Conferences;Databases;Image reconstruction;Machine learning;Partial differential equations;Pixel;Shape;Surface reconstruction;Training data},
+doi={10.1109/ICCVW.2009.5457444},
+ISSN={},
+month={Sept},}
+
+@InProceedings{Color_constancy_intrinsic_images_and_shape_estimation,
+author="Barron, Jonathan T.
+and Malik, Jitendra",
+editor="Fitzgibbon, Andrew
+and Lazebnik, Svetlana
+and Perona, Pietro
+and Sato, Yoichi
+and Schmid, Cordelia",
+title="Color Constancy, Intrinsic Images, and Shape Estimation",
+booktitle="ECCV",
+year="2012",
+publisher="Springer Berlin Heidelberg",
+address="Berlin, Heidelberg",
+pages="57--70",
+abstract="We present SIRFS (shape, illumination, and reflectance from shading), the first unified model for recovering shape, chromatic illumination, and reflectance from a single image. Our model is an extension of our previous work [1], which addressed the achromatic version of this problem. Dealing with color requires a modified problem formulation, novel priors on reflectance and illumination, and a new optimization scheme for dealing with the resulting inference problem. Our approach outperforms all previously published algorithms for intrinsic image decomposition and shape-from-shading on the MIT intrinsic images dataset [1, 2] and on our own ``naturally'' illuminated version of that dataset.",
+isbn="978-3-642-33765-9"
+}
+
+@article{Numerical_methods_for_shape_from_shading,
+title = "Numerical methods for shape-from-shading: A new survey with benchmarks",
+journal = "CVIU",
+volume = "109",
+number = "1",
+pages = "22 - 43",
+year = "2008",
+issn = "1077-3142",
+doi = "https://doi.org/10.1016/j.cviu.2007.09.003",
+url = "http://www.sciencedirect.com/science/article/pii/S1077314207001361",
+author = "Jean-Denis Durou and Maurizio Falcone and Manuela Sagona",
+keywords = "Shape-from-shading, Eikonal equation, Numerical methods, Algorithms comparison"
+}
+
+@INPROCEEDINGS{Depth_and_surface_normal_estimation,
+author={Bo Li and Chunhua Shen and Yuchao Dai and A. van den Hengel and Mingyi He},
+booktitle={CVPR},
+title={Depth and surface normal estimation from monocular images using regression on deep features and hierarchical CRFs},
+year={2015},
+volume={},
+number={},
+pages={1119-1127},
+keywords={feature extraction;image colour analysis;inference mechanisms;learning (artificial intelligence);neural nets;regression analysis;smoothing methods;CRF;DCNN model;Make3D dataset;NYU Depth V2 dataset;auto-regression term;closed-form solution;conditional random fields;data term;deep features;deep-convolutional neural network features;depth Predicting;depth normal estimation;depth normal map;estimation map;hierarchical CRF;inference problem;local structure;mapping learning;monocular images;multiscale image patches;postprocessing refining step;smoothness term;super-pixel level;surface normal estimation;surface normal map;Color;Context;Estimation;Feature extraction;Three-dimensional displays;Training;Training data},
+doi={10.1109/CVPR.2015.7298715},
+ISSN={1063-6919},
+month={June},}
+
+@ARTICLE{SegNet,
+author={V. Badrinarayanan and A. Kendall and R. Cipolla},
+journal={TPAMI},
+title={SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation},
+year={2017},
+volume={39},
+number={12},
+pages={2481-2495},
+keywords={feature extraction;gradient methods;image classification;image colour analysis;image representation;image resolution;image segmentation;inference mechanisms;learning (artificial intelligence);self-organising feature maps;topology;Caffe implementation;DeconvNet architectures;DeepLab-LargeFOV;FCN;SUN RGB-D indoor scene segmentation;SUN RGB-D indoor scene segmentation tasks;SegNet;VGG16 network;competitive inference time;convolutional layers;core trainable segmentation engine;decoder network;deep convolutional encoder-decoder architecture;dense feature maps;encoder network;image segmentation;low resolution encoder feature maps;lower resolution input feature map;max-pooling step;nonlinear upsampling;pixel-wise classification layer;pixel-wise segmentation;practical deep fully convolutional neural network architecture;stochastic gradient descent;Computer architecture;Convolutional codes;Decoding;Image segmentation;Neural networks;Semantics;Training;Deep convolutional neural networks;decoder;encoder;indoor scenes;pooling;road scenes;semantic pixel-wise segmentation;upsampling},
+doi={10.1109/TPAMI.2016.2644615},
+ISSN={0162-8828},
+month={Dec},}

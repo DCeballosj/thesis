@@ -1,0 +1,36 @@
+\graphicspath{{img/}}
+
+% custom todo
+\newcommand{\todo}[1]{\textcolor{red}{\large \emph{\bfseries{TODO:}}} #1 \\}
+
+% Bold vectors
+\let\vecarrow\vec 					% save old vector definition
+\renewcommand\vec[1]{{\mathbf{#1}}}
+
+% shortcuts
+\newcommand{\etal}{\textit{et al}.\ }
+\newcommand{\ie}{\textit{i}.\textit{e}.\ }
+\newcommand{\eg}{\textit{e}.\textit{g}.\ }
+\newcommand{\Eg}{\textit{E}.\textit{g}.\ }
+
+% images size
+\newcommand{\imgsize}{192}
+\newcommand{\facesize}{64}
+
+% shortcuts for often used mathematical terms
+\newcommand{\distr}{\mathbb{P}_d}
+\newcommand{\distt}{\mathbb{P}_\theta}
+\newcommand{\genInputZ}{z}
+\newcommand{\genInputB}{y}
+\newcommand{\genWithZInput}{G(\genInputZ)}
+\newcommand{\genWithInput}{G(\genInputZ, \genInputB)}
+\newcommand{\discInput}{x}
+\newcommand{\discWithInput}{D(\discInput)}
+
+% figure sizes
+\newcommand{\threeFigOnePageSize}{7.18cm}
+
+% KL doppelstrich
+\DeclarePairedDelimiterX{\infdivx}[2]{(}{)}{%
+	#1\;\delimsize\|\;#2%
+}

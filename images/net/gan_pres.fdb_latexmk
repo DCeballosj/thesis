@@ -1,0 +1,11 @@
+# Fdb version 3
+["pdflatex"] 1513114817 "gan_pres.tex" "gan_pres.pdf" "gan_pres" 1513114817
+  "/etc/texmf/web2c/texmf.cnf" 1490820887 475 c0e671620eb5563b2130f56340a5fde8 ""
+  "/usr/share/texlive/texmf-dist/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/usr/share/texmf/web2c/texmf.cnf" 1503343927 31343 93828589fb0cea665e553ee5a17ad2d4 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1503471673 1349077 593227bf02cfb6e51bf1211c3c58860d ""
+  "gan_pres.aux" 1513114817 8 a94a2480d3289e625eea47cd1b285758 ""
+  "gan_pres.tex" 1513114817 1347 f03c5ed447f9742aae8ee78fe4717281 ""
+  (generated)
+  "gan_pres.pdf"
+  "gan_pres.log"

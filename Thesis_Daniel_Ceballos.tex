@@ -1,0 +1,73 @@
+\newcommand{\Thesiscolor}{tud1b}
+\newcommand{\Thesiscolorbright}{tud1a}
+\documentclass[
+type=bsc,			% Bachelor Thesis
+accentcolor=\Thesiscolor,	% Blau
+colorbacktitle,		% Farbige Titelseite
+11pt				% Schriftgröße
+]{tudthesis}
+
+\input{other/includes.tex}
+\input{other/definitions.tex}
+
+\thesistitle{Unconstrained Shape from Shading using CNN}{}
+
+\author{Daniel José Ceballos Jung}
+\birthplace{Stuttgart}
+
+\referee{Stefan Roth, Ph.D.}{Stephan Richter, M.Sc.}{}
+
+\department{Fachbereich Informatik}
+\group{Visual Inference}
+\setinstitutionlogo{images/logos/vi-logo.png}
+
+\includeonly{
+%	chapters/abstract,
+%	chapters/introduction,
+%	chapters/related-work,
+	chapters/background,
+%	chapters/dataset,
+%	chapters/model,
+%	chapters/experiments,
+%	chapters/conclusion,
+}
+
+\begin{document}
+	% --- Title page --- %
+	\makethesistitle
+	
+	\affidavit[23.07.2018]{Daniel Ceballos}
+	
+	\section*{Acknowledgements}
+	First of all, I want to thank Professor Stefan Roth for giving me the opportunity to write my thesis in his visual inference group.\\ \\
+	Further, I thank my supervisor Stephan for being a great help, giving lots of input and guiding me through this thesis. \\ \\
+	I would like to thank my friend Janne for investing a lot of time in proofreading and giving great input on writing. \\ \\
+	Eventually, I thank my family for their trust and unconditional support.
+	\clearpage
+	
+	\begin{abstract}
+		\include{chapters/abstract}
+	\end{abstract}
+	
+	% --- Table of contents --- %
+	\tableofcontents
+	
+	% --- Main Document --- %
+	\include{chapters/introduction}
+	\include{chapters/related-work}
+	\include{chapters/background}
+	\include{chapters/dataset}
+	\include{chapters/model}
+	\include{chapters/experiments}
+	\include{chapters/conclusion}
+	
+	% --- List of figures and tables --- %
+	\clearpage
+	\listoffigures
+	\listoftables
+	
+	% --- Bibliography --- %
+	\bibliography{bib/bibliography}{}
+	\bibliographystyle{plain}
+	
+\end{document}
